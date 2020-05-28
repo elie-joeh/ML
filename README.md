@@ -39,9 +39,32 @@ Achieved a test F1 score of 0.886 wiht parameters: {'alpha': 0.001, 'loss': 'log
 
 
 3. Tuned BOW
-I used the sklearn pipeline and GridSearchCV, to tune the bag of words along with the machine learning methods. I have used the SGD classifier to model 
+I used the sklearn pipeline and GridSearchCV, to tune the bag of words along with the machine learning methods. I have used the SGD classifier to model.
+
+- Linear SVML
+Achieved a test F1 score of 0.902 with the parameter set:
+	clf__alpha: 1e-05
+	clf__max_iter: 100
+	vect__max_df: 0.3
+	vect__max_features: None
+	vect__ngram_range: (1, 2)
+
+- Logistic Regression
+Achieved a test F1 score of 0.902 with the parameter set:
+	clf__alpha: 1e-06
+	clf__eta0: 0.001
+	clf__learning_rate: 'optimal'
+	clf__loss: 'log'
+	clf__shuffle: True
+	vect__max_df: 0.2
+	vect__max_features: None
+	vect__ngram_range: (1, 2)
+
 
 4. Neural Network with FBOW
+After hypertuning the NN, the best prediction reached is 88.7% with 3 hidden layers, with 50, 25 and 10 nodes respectively.
+The optimal parameters are: {'batch_size': 1000, 'dropout_rate': 0.8, 'epochs': 30, 'weight_decay': 1e-06}
 
 
-5. Word Embeddings with CNN
+
+5. CNN Word Embeddings
